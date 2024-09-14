@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OSINT Trawler Results</title>
+  </head>
+  <body>
+    <h1>OSINT Trawler Results</h1>
+
+    <h2>Chatbot Responses</h2>
+    <ul>
+      {% for response in chat_responses %}
+      <li>{{ response }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Email Breaches</h2>
+    <ul>
+      {% if email_breaches %} {% for breach in email_breaches %}
+      <li>
+        Title: {{ breach.title }}, Date: {{ breach.date }}, Description: {{
+        breach.description }}
+      </li>
+      {% endfor %} {% else %}
+      <li>No email breaches found.</li>
+      {% endif %}
+    </ul>
+
+    <h2>Instagram Data</h2>
+    <ul>
+      {% if instagram_data %}
+      <li>Username: {{ instagram_data.username }}</li>
+      <li>Full Name: {{ instagram_data.full_name }}</li>
+      <li>Followers: {{ instagram_data.follower_count }}</li>
+      <li>Following: {{ instagram_data.following_count }}</li>
+      <li>Bio: {{ instagram_data.biography }}</li>
+      {% else %}
+      <li>No Instagram data found.</li>
+      {% endif %}
+    </ul>
+  </body>
+</html>
