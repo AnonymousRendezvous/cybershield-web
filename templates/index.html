@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OSINT Tool</title>
+  </head>
+  <body>
+    <h1>OSINT Tool</h1>
+    <form method="POST">
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <title>OSINT Trawler</title>
+        </head>
+        <body>
+          <h1>OSINT Trawler - Enter Query Details</h1>
+          <form method="POST" action="/">
+            <label for="query">Query:</label><br />
+            <input type="text" id="query" name="query" required /><br /><br />
+
+            <label for="keyword"
+              >Enter a keyword associated with the person:</label
+            ><br />
+            <input
+              type="text"
+              id="keyword"
+              name="keyword"
+              required
+            /><br /><br />
+
+            <label for="images">Do you want to trawl for images? (y/n):</label
+            ><br />
+            <input type="text" id="images" name="images" required /><br /><br />
+
+            <label for="email">Input your email address:</label><br />
+            <input type="email" id="email" name="email" /><br /><br />
+
+            <label for="instagram"
+              >Input your Instagram username (beta testing):</label
+            ><br />
+            <input type="text" id="instagram" name="instagram" /><br /><br />
+
+            <input type="submit" value="Submit" />
+          </form>
+        </body>
+      </html>
+    </form>
+  </body>
+</html>
