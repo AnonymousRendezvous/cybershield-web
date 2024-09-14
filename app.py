@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import g4f
 from g4f.client import Client
 
+port = 4000
 app = Flask(__name__)
 
 client = Client(provider=g4f.Provider.MetaAI)
